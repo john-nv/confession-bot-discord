@@ -44,6 +44,11 @@ client.on('message', async (message) => {
             .setDescription(`\n\n${message.content}\n`)
             .setFooter(`Đây là tâm thư của một bạn trong Family ♥️ `, client.user.displayAvatarURL());
 
+        // check
+        const embed2 = new MessageEmbed()
+            .setDescription(`Confession số : ${count}\n\n${message.content}\n`)
+            .setFooter(`Đây là tâm thư của một bạn trong Family ♥️ ${message.author.tag}`, client.user.displayAvatarURL());
+
         // anh va video
         if (message.attachments.array().length > 0) {
             let attachment = message.attachments.array()[0];
@@ -55,13 +60,7 @@ client.on('message', async (message) => {
             });
         }
 
-
         cfsChannel.send(embed);
-
-        // check
-        const embed2 = new MessageEmbed()
-            .setDescription(`Confession số : ${count}\n\n${message.content}\n`)
-            .setFooter(`Đây là tâm thư của một bạn trong Family ♥️ ${message.author.tag}`, client.user.displayAvatarURL());
         cfsChannelcheck.send(embed2);
 
         fs.writeFileSync('./count.json', JSON.stringify({ count: count }));
