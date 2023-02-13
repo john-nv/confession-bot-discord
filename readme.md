@@ -1,4 +1,4 @@
-# Bot music Discord
+# Bot Confession Discord
 Bot confession gửi bài viết đến phòng cách ẩn danh thay cho người viết.
 
 Nó được xây dựng riêng cho server của bạn, đơn giản dễ sử dụng với người dùng và mượt mà.
